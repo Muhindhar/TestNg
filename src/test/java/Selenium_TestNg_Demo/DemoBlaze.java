@@ -48,7 +48,7 @@ public class DemoBlaze {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("loginusername"))).sendKeys(username);
         driver.findElement(By.id("loginpassword")).sendKeys(password);
         driver.findElement(By.xpath("//button[text()='Log in']")).click();
-
+         Thread.sleep(2000);
         if (isAlertPresent()) {
             Alert alert = driver.switchTo().alert();
             String msg = alert.getText();
